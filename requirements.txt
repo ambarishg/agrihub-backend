@@ -1,0 +1,15 @@
+python-dotenv
+pydantic~=2.7.3
+pydantic-settings~=2.2.1
+pandas
+fastapi
+fastapi-cors
+uvicorn
+python-multipart
+azure-storage-blob
+opencv-python
+itsdangerous
+fastapi-mail
+mysql-connector-python
+albumentations
+timm

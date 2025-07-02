@@ -1,0 +1,11 @@
+.venv
+.env
+*.db
+uploads/
+predictions/
+**/__pycache__/
+models/
+*.csv
+nohup*
+*.log
+
