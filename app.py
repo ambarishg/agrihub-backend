@@ -142,8 +142,9 @@ async def reset_password(request:ResetPasswordRequest):
 
 @app.post("/api/upload_docs")
 async def _upload_docs(file_data: UploadFile = File(...),
-                       file_description: str = Form(...),
-                       category: str = Form(...)):
+                       category: str = Form(...),
+                       file_description: str = Form(""),
+                      ):
     
     print(f"File Description : {file_description}")
     print(f"Location : {category}")
