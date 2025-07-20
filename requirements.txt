@@ -7,9 +7,9 @@ fastapi-cors
 uvicorn
 python-multipart
 azure-storage-blob
-opencv-python
+opencv-python==4.11.0.86
 itsdangerous
 fastapi-mail
 mysql-connector-python
-albumentations
+albumentations==1.4.21
 timm

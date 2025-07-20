@@ -34,7 +34,9 @@ app.add_middleware(
 
 import cv2
 
-
+@app.post("/api/health-check")
+async def health_check():
+    return {"status": "ok"}
 
 
 
@@ -162,14 +164,14 @@ async def _upload_docs(file_data: UploadFile = File(...),
     upload_time = time.time()
     elapsed_time01 = upload_time - start_time
 
-    file_manager = FileManager()
-    file_manager.insert_file_log(file_name = file_data.filename,
-                                 file_status = "UPLOADED",
-                                 annotated_file_path= None,
-                                 results_file_path=None,
-                                 user_name="",
-                                 file_description=file_description,
-                                 location= category,)
+    # file_manager = FileManager()
+    # file_manager.insert_file_log(file_name = file_data.filename,
+    #                              file_status = "UPLOADED",
+    #                              annotated_file_path= None,
+    #                              results_file_path=None,
+    #                              user_name="",
+    #                              file_description=file_description,
+    #                              location= category,)
 
     classifier = ImageClassifier()
     predictions = classifier.get_predictions(file_data.filename,category = category)
